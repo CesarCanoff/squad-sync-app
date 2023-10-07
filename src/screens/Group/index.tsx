@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { GroupContainer } from './styles';
 
 export function Group() {
   return (
-    <Text>Group</Text>
+    <GroupContainer>
+    </GroupContainer>
   );
 }
