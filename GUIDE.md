@@ -31,3 +31,11 @@ Installing the ***native stack*** navigator
 npm install @react-navigation/native-stack
 ```
 ---
+### Async Storage
+Installation
+```shell
+npx expo install @react-native-async-storage/async-storage
+```
+
+
+07
