@@ -1,13 +1,10 @@
-export default {
+// theme.ts
+const theme = {
   COLORS: {
     WHITE: '#FFFFFF',
-
-    BLUE_700: '#0A94DC',
-    BLUE_500: '#3494D9',
-
+    BLUE_500: '#025896',
     RED: '#F75A68',
     RED_DARK: '#AA2834',
-
     GRAY_700: '#121214',
     GRAY_600: '#202024',
     GRAY_500: '#29292E',
@@ -27,3 +24,5 @@ export default {
     XL: 24,
   },
 };
+
+export default theme;
