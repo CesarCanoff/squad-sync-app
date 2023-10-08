@@ -1,5 +1,9 @@
 import { ButtonIconAction } from "@components/ButtonIconAction";
-import { PlayerCardContainer, PlayerCardIcon, PlayerCardPlayerName } from "./styles";
+import {
+  PlayerCardContainer,
+  PlayerCardIcon,
+  PlayerCardPlayerName
+} from "./styles";
 
 type Props = {
   name: string;

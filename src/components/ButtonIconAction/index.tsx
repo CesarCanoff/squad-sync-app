@@ -1,4 +1,9 @@
-import { ButtonIconActionContainer, ButtonIconActionStyleProps, ButtonIconActionIcon } from "./styles";
+import {
+  ButtonIconActionContainer,
+  ButtonIconActionStyleProps,
+  ButtonIconActionIcon
+} from "./styles";
+
 import { TouchableOpacityProps } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 

@@ -8,7 +8,7 @@ export const GroupCardContainer = styled(TouchableOpacity)`
   background-color: ${({ theme }) => theme.COLORS.GRAY_500};
   border-left-color: ${({ theme }) => theme.COLORS.BLUE_500};
   border-left-width: 6px;
-  border-radius: 0 7px 7px 0;
+  border-radius: 7px;
   flex-direction: row;
   align-items: center;
 

@@ -6,7 +6,7 @@ import theme from './src/theme';
 
 import { Loading } from '@components/Loading';
 
-import { PlayersList } from '@screens/PlayersList';
+import { Routes } from './src/routes'; 
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,7 +22,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <PlayersList /> : <Loading />}
+        {fontsLoaded ? <Routes /> : <Loading />}
       </>
     </ThemeProvider>
   );
