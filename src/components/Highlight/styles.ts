@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components/native";
+import styled, { css } from 'styled-components/native';
 
 export const HighlightContainer = styled.View`
   width: 100%;

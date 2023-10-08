@@ -1,4 +1,4 @@
-import { BackButton, BackIcon, HeaderContainer, HeaderLogo } from "./styles";
+import { BackButton, BackIcon, HeaderContainer, HeaderLogo } from './styles';
 
 import Logo from '@assets/logo.png';
 

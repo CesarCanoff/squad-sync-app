@@ -1,4 +1,4 @@
-import { HighlightContainer, HighlightTitle, HighlightSubtitle } from "./styles";
+import { HighlightContainer, HighlightTitle, HighlightSubtitle } from './styles';
 
 type Props = {
   title: string;

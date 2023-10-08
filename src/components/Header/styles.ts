@@ -1,5 +1,5 @@
-import { CaretLeft } from "phosphor-react-native";
-import styled from "styled-components/native";
+import { CaretLeft } from 'phosphor-react-native';
+import styled from 'styled-components/native';
 
 export const HeaderContainer = styled.View`
   width: 100%;
