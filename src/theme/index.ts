@@ -1,5 +1,5 @@
 // theme.ts
-const theme = {
+export default {
   COLORS: {
     WHITE: '#FFFFFF',
     BLUE_500: '#025896',
@@ -24,5 +24,3 @@ const theme = {
     XL: 24,
   },
 };
-
-export default theme;

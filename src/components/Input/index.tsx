@@ -5,11 +5,11 @@ import { useTheme } from "styled-components";
 import { InputContainer } from "./styles";
 
 export function Input({ ...rest }: TextInputProps) {
-  const theme = useTheme();
+  const { COLORS } = useTheme();
 
   return (
     <InputContainer
-      placeholderTextColor={theme.COLORS.GRAY_200}
+      placeholderTextColor={COLORS.GRAY_300}
       {...rest}
 
     />

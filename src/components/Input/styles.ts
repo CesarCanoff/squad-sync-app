@@ -15,6 +15,5 @@ export const InputContainer = styled(TextInput)`
   `}
 
   border-radius: 7px;
-  margin-bottom: 16px;
   padding: 18px;
 `;

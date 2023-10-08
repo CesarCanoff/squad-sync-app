@@ -6,7 +6,7 @@ import theme from './src/theme';
 
 import { Loading } from '@components/Loading';
 
-import { NewGroup } from '@screens/NewGroup';
+import { PlayersList } from '@screens/PlayersList';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,7 +22,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <NewGroup /> : <Loading />}
+        {fontsLoaded ? <PlayersList /> : <Loading />}
       </>
     </ThemeProvider>
   );

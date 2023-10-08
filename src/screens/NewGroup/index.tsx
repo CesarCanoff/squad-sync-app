@@ -20,7 +20,7 @@ export function NewGroup() {
 
         <Input placeholder="Group name" />
 
-        <Button title="Create group" />
+        <Button title="Create group" style={{ marginTop: 15 }}/>
       </NewGroupContent>
 
     </NewGroupContainer>
