@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { FlatList } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 
 import { GroupContainer } from './styles';
 
@@ -10,12 +10,32 @@ import { Highlight } from '@components/Highlight';
 import { GroupCard } from '@components/GroupCard';
 import { EmptyList } from '@components/EmptyList';
 
+import { groupsGetAll } from '@storage/group/groupsGetAll';
+
 export function Groups() {
-  const [groups, setGroups] = useState([]);
+  const [groups, setGroups] = useState<string[]>([]);
 
   const { navigate } = useNavigation();
 
   const handleNavigateNewGroup = () => navigate('NewGroup');
+
+  const handleNavigatePlayersList = (groupName: string) => {
+    navigate('PlayersList', { GROUP_NAME: groupName });
+  }
+
+  const fetchGroupOnAsyncStorage = async () => {
+    try {
+      const data = await groupsGetAll();
+      setGroups(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useFocusEffect(
+    useCallback(() => {
+      fetchGroupOnAsyncStorage();
+    }, []));
 
   return (
     <GroupContainer>
@@ -37,7 +57,7 @@ export function Groups() {
         renderItem={({ item }) => (
           <GroupCard
             title={item}
-            onPress={() => { }}
+            onPress={() => handleNavigatePlayersList(item)}
           />
         )}
       />

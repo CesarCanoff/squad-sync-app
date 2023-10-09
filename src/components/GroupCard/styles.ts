@@ -5,7 +5,7 @@ import { UsersThree } from 'phosphor-react-native';
 export const GroupCardContainer = styled(TouchableOpacity)`
   width: 100%;
   height: 90px;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_500};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_700};
   border-left-color: ${({ theme }) => theme.COLORS.BLUE_500};
   border-left-width: 6px;
   border-radius: 7px;

@@ -36,6 +36,3 @@ Installation
 ```shell
 npx expo install @react-native-async-storage/async-storage
 ```
-
-
-07
