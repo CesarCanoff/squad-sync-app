@@ -11,8 +11,10 @@ import { GroupCard } from '@components/GroupCard';
 import { EmptyList } from '@components/EmptyList';
 
 import { groupsGetAll } from '@storage/group/groupsGetAll';
+import { Loading } from '@components/Loading';
 
 export function Groups() {
+  const [isLoading, setIsLoading] = useState(true);
   const [groups, setGroups] = useState<string[]>([]);
 
   const { navigate } = useNavigation();
@@ -24,11 +26,15 @@ export function Groups() {
   }
 
   const fetchGroupOnAsyncStorage = async () => {
+    setIsLoading(true);
+
     try {
       const data = await groupsGetAll();
       setGroups(data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -46,21 +52,24 @@ export function Groups() {
         subtitle='Play with your group'
       />
 
-      <FlatList
-        data={groups}
-        keyExtractor={(item) => item}
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={groups.length === 0 && { flex: 1 }}
-        ListEmptyComponent={() => (
-          <EmptyList message='No group, how about registering one?' />
-        )}
-        renderItem={({ item }) => (
-          <GroupCard
-            title={item}
-            onPress={() => handleNavigatePlayersList(item)}
-          />
-        )}
-      />
+      {isLoading ? <Loading /> :
+        <FlatList
+          data={groups}
+          keyExtractor={(item) => item}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={groups.length === 0 && { flex: 1 }}
+          ListEmptyComponent={() => (
+            <EmptyList message='No group, how about registering one?' />
+          )}
+          renderItem={({ item }) => (
+            <GroupCard
+              title={item}
+              onPress={() => handleNavigatePlayersList(item)}
+            />
+          )}
+        />
+
+      }
 
       <Button title='Create group' onPress={handleNavigateNewGroup} />
     </GroupContainer>
